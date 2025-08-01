@@ -4,7 +4,7 @@
     "slug": "nanu-ryan-interview",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/nanu.png",
     "scheme": "nanuryaninterview",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
