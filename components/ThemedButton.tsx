@@ -1,3 +1,5 @@
+// Dynamic button to adjust colors and labels with specified onPress. 
+// Mostly used for styling purposes
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, ViewStyle } from "react-native";
 

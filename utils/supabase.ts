@@ -13,3 +13,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     detectSessionInUrl: false,
   },
 });
+
+// Note this cannot be used without credentials from Ryan Romero. If you are trying to use this contact him 
+// Or the db has been shut down.

@@ -1,13 +1,11 @@
-import { ThemedText, ThemedView } from "@/components";
-import React, { useState } from "react";
-import {
-  StyleSheet,
-  Switch,
-  TextStyle,
-  TouchableOpacity,
-  ViewStyle,
-} from "react-native";
+// The following components allow a transition between Headers and Base Values
+// Headers can be toggled to replace all lower bound values.
+// NOTE: This component does not allow for non-boolean values in the json structure
+// This wouldn't be difficult to change, but was a design choice based on initial requirements.
 
+import React, { useState } from "react";
+import { StyleSheet, Switch, TextStyle, TouchableOpacity } from "react-native";
+import { ThemedText, ThemedView } from "@/components";
 type CollapsibleToggleProps = {
   label: string;
   value: boolean;
@@ -27,12 +25,13 @@ function setAllBooleans(obj: any, value: boolean): any {
   return obj;
 }
 
-// Utility to capitalize the first letter
+// Utility to capitalize the first letter, more OCD styling than not
 function capitalizeFirst(str: string) {
   if (!str) return "";
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+// The adjustable value is used here to disallow non-patient users from modifying values
 const CollapsibleToggle: React.FC<CollapsibleToggleProps> = ({
   label,
   value,
@@ -200,7 +199,11 @@ export default function SettingsTree({
   settings,
   setSettings,
   adjustable = false,
-}: any) {
+}: {
+  settings: object;
+  setSettings: (settings: object) => void;
+  adjustable: boolean;
+}) {
   return (
     <ThemedView style={styles.container}>
       <NestedToggle

@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { StyleSheet } from "react-native";
 import {
   ParallaxScrollView,
   ThemedButton,
@@ -5,8 +7,6 @@ import {
   ThemedView,
 } from "@/components";
 import { router, useLocalSearchParams } from "expo-router";
-import { useEffect, useState } from "react";
-import { Button, StyleSheet } from "react-native";
 import { supabase } from "@/utils/supabase";
 import { SafeAreaView } from "react-native-safe-area-context";
 import SettingsTree from "@/components/ui/SettingsTree";

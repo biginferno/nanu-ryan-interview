@@ -1,3 +1,7 @@
+// React Native Calendars is used ass the primary library for choosing dates.
+// The current date is always shown in its pink format, even when chosen.
+// The text Today's date is used to showcase the current date is highlighted permanently
+
 import React from "react";
 import { Calendar } from "react-native-calendars";
 import { ThemedText } from "../ThemedText";
@@ -61,7 +65,7 @@ const CalendarPicker: React.FC<CalendarPickerProps> = ({
         markedDates={markedDates}
       />
       <ThemedText style={{ textAlign: "center", marginTop: 10 }}>
-        Today's Date: {new Date().toLocaleDateString()}
+        {`Today's`} Date: {new Date().toLocaleDateString()}
       </ThemedText>
     </>
   );

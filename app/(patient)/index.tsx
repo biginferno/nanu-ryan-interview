@@ -7,7 +7,7 @@ import {
 import SettingsTree from "@/components/ui/SettingsTree";
 import { useRouter, useGlobalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
-import { StyleSheet, ActivityIndicator } from "react-native";
+import { StyleSheet } from "react-native";
 import { supabase } from "@/utils/supabase";
 
 export default function PatientScreen() {

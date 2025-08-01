@@ -7,11 +7,10 @@ import {
 import CalendarPicker from "@/components/ui/CalendarPicker";
 import {
   useFocusEffect,
-  useLocalSearchParams,
   useGlobalSearchParams,
 } from "expo-router";
 import React, { useState } from "react";
-import { StyleSheet, TextInput, ActivityIndicator } from "react-native";
+import { StyleSheet, TextInput } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { supabase } from "@/utils/supabase";
 type Log = {
